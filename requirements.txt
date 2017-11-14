@@ -1,0 +1,1 @@
+hg+https://bitbucket.org/flyingcircus/batou_ext@88b394e0b7152517b5d815c37e91809360792a53#egg=batou_ext
