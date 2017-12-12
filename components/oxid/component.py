@@ -1,6 +1,6 @@
 import batou
 import batou.component
-from batou.lib.file import File
+from batou.lib.file import File, Mode
 from batou.lib.download import Download
 from batou.lib.archive import Extract
 from batou.utils import Address
@@ -26,6 +26,8 @@ class Oxid(batou.component.Component):
     def configure(self):
         self.require('mysql:oxid')
         self.provide('oxid', batou.utils.Address(self.host.fqdn, port=8080))
+
+        self += Mode('~', mode=0o701)
 
         self += Download('http://download.oxid-esales.com/ce',
                          target='shop.zip',

@@ -3,8 +3,8 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
-  config.vm.box = "flyingcircus/nixos-15.09-x86_64"
-  config.vm.box_version = ">= 3033"
+  config.vm.box = "flyingcircus/nixos-15.09-dev-x86_64"
+  config.vm.box_version = ">= 3084"
   config.vm.provider "virtualbox" do |v|
       v.memory = 2048
       v.cpus = 1
